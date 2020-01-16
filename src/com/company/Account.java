@@ -20,4 +20,9 @@ public class Account {
     public void addProfile(Profile profile) {
         profiles.add(profile);
     }
+
+    public void deleteProfile(Profile profile) {
+        profiles.remove(profile);
+    }
 }
+
