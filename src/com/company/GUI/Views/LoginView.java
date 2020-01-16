@@ -1,5 +1,6 @@
-package com.company.GUI;
+package com.company.GUI.Views;
 
+import com.company.GUI.Controllers.LoginController;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -33,7 +34,7 @@ public class LoginView extends Application {
         Button logInButton = new Button("Log in");
         Button registerButton = new Button("Register");
 
-        LoginController loginctrl = new LoginController(textFieldEmail, textFieldPassword);
+        LoginController loginctrl = new LoginController(textFieldEmail, textFieldPassword, errorLabel);
         logInButton.setOnAction(loginctrl);
         logInButton.setOnAction(loginctrl);
 
