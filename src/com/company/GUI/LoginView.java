@@ -11,7 +11,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-public class GuiView extends Application {
+public class LoginView extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -40,7 +40,6 @@ public class GuiView extends Application {
         gridPaneHome.add(textFieldPassword, 1, 1);
         gridPaneHome.add(logInButton, 0, 2);
         gridPaneHome.add(registerButton, 1, 2);
-
 
         primaryStage.setScene(homeScene);
         primaryStage.show();
