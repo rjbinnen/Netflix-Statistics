@@ -17,5 +17,39 @@ public class Program {
         this.ageIndicator = ageIndicator;
     }
 
-    
+    public String getTitle() {
+        return title;
+    }
+
+    public int getDuration() {
+        return duration;
+    }
+
+    public Program getSimilarProgram() {
+        return similarProgram;
+    }
+
+    public String getGenre() {
+        return genre;
+    }
+
+    public String getLanguage() {
+        return language;
+    }
+
+    public int getAgeIndicator() {
+        return ageIndicator;
+    }
+
+    @Override
+    public String toString() {
+        return "Program{" +
+                "title='" + title + '\'' +
+                ", duration=" + duration +
+                ", similarProgram=" + similarProgram +
+                ", genre='" + genre + '\'' +
+                ", language='" + language + '\'' +
+                ", ageIndicator=" + ageIndicator +
+                '}';
+    }
 }

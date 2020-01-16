@@ -14,4 +14,24 @@ public class Profile {
         this.watchedPrograms = watchedPrograms;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public Date getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public ArrayList<Program> getWatchedPrograms() {
+        return watchedPrograms;
+    }
+
+    @Override
+    public String toString() {
+        return "Profile{" +
+                "name='" + name + '\'' +
+                ", dateOfBirth=" + dateOfBirth +
+                ", watchedPrograms=" + watchedPrograms +
+                '}';
+    }
 }

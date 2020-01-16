@@ -25,8 +25,35 @@ public class Account {
         profiles.remove(profile);
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public String getStreetname() {
+        return streetname;
+    }
+
+    public String getAddition() {
+        return addition;
+    }
+
+    public String getResidence() {
+        return residence;
+    }
+
     public ArrayList<Profile> getProfiles() {
         return profiles;
+    }
+
+    @Override
+    public String toString() {
+        return "Account{" +
+                "name='" + name + '\'' +
+                ", streetname='" + streetname + '\'' +
+                ", addition='" + addition + '\'' +
+                ", residence='" + residence + '\'' +
+                ", profiles=" + profiles +
+                '}';
     }
 }
 
