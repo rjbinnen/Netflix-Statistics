@@ -1,9 +1,9 @@
 package com.company;
 
-public class Programma {
+public class Program {
     private String titel;
     private int tijdsduur;
-    private Programma vergelijkbaarProgramma;
+    private Program vergelijkbaarProgramma;
     private String genre;
     private String taal;
     private int leeftijdsindicatie;
