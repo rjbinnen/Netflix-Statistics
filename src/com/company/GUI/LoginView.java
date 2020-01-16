@@ -5,6 +5,7 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
@@ -19,13 +20,15 @@ public class LoginView extends Application {
     public void start(Stage primaryStage) throws Exception {
         GridPane gridPaneHome = new GridPane();
         Scene homeScene = new Scene(gridPaneHome);
-        primaryStage.setTitle("Netflix Statistics - Home");
+        primaryStage.setTitle("Netflix Statistics - Log In");
 
         Text textEmail = new Text("E-mail");
         Text textPassword = new Text("Password");
 
         TextField textFieldEmail = new TextField();
         PasswordField textFieldPassword = new PasswordField();
+
+        Label errorLabel = new Label("");
 
         Button logInButton = new Button("Log in");
         Button registerButton = new Button("Register");
@@ -45,7 +48,8 @@ public class LoginView extends Application {
         gridPaneHome.add(textPassword, 0, 1);
         gridPaneHome.add(textFieldPassword, 1, 1);
         gridPaneHome.add(logInButton, 0, 2);
-        gridPaneHome.add(registerButton, 1, 2);
+        gridPaneHome.add(registerButton, 1,2);
+        gridPaneHome.add(errorLabel, 0, 3);
 
         primaryStage.setScene(homeScene);
         primaryStage.show();

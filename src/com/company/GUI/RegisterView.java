@@ -17,12 +17,13 @@ public class RegisterView extends Application {
         GridPane gridPaneRegister = new GridPane();
         Scene RegisterScene = new Scene(gridPaneRegister);
         primaryStage.setTitle("Netflix Statistics - Register");
+        RegisterScene.getStylesheets().add("/css/register.css");
 
         Text textName = new Text("First Name + Last Name");
         Text textEmail = new Text("E-mail");
         Text textPassword = new Text("Password");
         Text textPasswordRepeat = new Text("Repeat Password");
-        Text textStreetname = new Text("Streetname");
+        Text textStreetName = new Text("Streetname");
         Text textAddition = new Text("Addition");
         Text textResidence = new Text("Residence");
 
@@ -30,7 +31,7 @@ public class RegisterView extends Application {
         TextField textFieldEmail = new TextField();
         PasswordField textFieldPassword = new PasswordField();
         PasswordField textFieldPasswordRepeat = new PasswordField();
-        TextField textFieldStreetname = new TextField();
+        TextField textFieldStreetName = new TextField();
         TextField textFieldAddition = new TextField();
         TextField textFieldResidence = new TextField();
 
@@ -50,8 +51,8 @@ public class RegisterView extends Application {
         gridPaneRegister.add(textFieldPassword, 1, 2);
         gridPaneRegister.add(textPasswordRepeat, 0, 3);
         gridPaneRegister.add(textFieldPasswordRepeat, 1, 3);
-        gridPaneRegister.add(textStreetname, 0, 4);
-        gridPaneRegister.add(textFieldStreetname, 1, 4);
+        gridPaneRegister.add(textStreetName, 0, 4);
+        gridPaneRegister.add(textFieldStreetName, 1, 4);
         gridPaneRegister.add(textAddition, 0, 5);
         gridPaneRegister.add(textFieldAddition, 1, 5);
         gridPaneRegister.add(textResidence, 0, 6);
