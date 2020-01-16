@@ -36,7 +36,7 @@ public class RegisterView extends Application {
         TextField textFieldResidence = new TextField();
 
         Button confirmRegisterButton = new Button("Confirm Registration");
-        Button cancelButton = new Button("Cancle");
+        Button cancelButton = new Button("Cancel");
 
         gridPaneRegister.setMinSize(400, 200);
         gridPaneRegister.setPadding(new Insets(10, 10, 10, 10));
