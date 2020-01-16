@@ -13,6 +13,8 @@ import javafx.stage.Stage;
 
 public class LoginView extends Application {
 
+
+
     @Override
     public void start(Stage primaryStage) throws Exception {
         GridPane gridPaneHome = new GridPane();
@@ -27,6 +29,10 @@ public class LoginView extends Application {
 
         Button logInButton = new Button("Log in");
         Button registerButton = new Button("Register");
+
+        LoginController loginctrl = new LoginController(textFieldEmail, textFieldPassword);
+        logInButton.setOnAction(loginctrl);
+        logInButton.setOnAction(loginctrl);
 
         gridPaneHome.setMinSize(400, 200);
         gridPaneHome.setPadding(new Insets(10, 10, 10, 10));
