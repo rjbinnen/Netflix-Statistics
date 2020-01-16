@@ -1,12 +1,21 @@
 package com.company;
 
 public class Program {
-    private String titel;
-    private int tijdsduur;
-    private Program vergelijkbaarProgramma;
+    private String title;
+    private int duration;
+    private Program similarProgram;
     private String genre;
-    private String taal;
-    private int leeftijdsindicatie;
+    private String language;
+    private int ageIndicator;
+
+    public Program(String title, int duration, Program similarProgram, String genre, String language, int ageIndicator) {
+        this.title = title;
+        this.duration = duration;
+        this.similarProgram = similarProgram;
+        this.genre = genre;
+        this.language = language;
+        this.ageIndicator = ageIndicator;
+    }
 
     
 }
