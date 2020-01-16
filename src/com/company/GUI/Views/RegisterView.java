@@ -15,9 +15,8 @@ public class RegisterView extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         GridPane gridPaneRegister = new GridPane();
-        Scene RegisterScene = new Scene(gridPaneRegister);
+        Scene registerScene = new Scene(gridPaneRegister);
         primaryStage.setTitle("Netflix Statistics - Register");
-        RegisterScene.getStylesheets().add("/css/register.css");
 
         Text textName = new Text("First Name + Last Name");
         Text textEmail = new Text("E-mail");
@@ -61,7 +60,7 @@ public class RegisterView extends Application {
         gridPaneRegister.add(confirmRegisterButton, 0, 7);
         gridPaneRegister.add(cancelButton, 1, 7);
 
-        primaryStage.setScene(RegisterScene);
+        primaryStage.setScene(registerScene);
         primaryStage.show();
     }
 }
