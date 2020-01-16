@@ -24,5 +24,9 @@ public class Account {
     public void deleteProfile(Profile profile) {
         profiles.remove(profile);
     }
+
+    public ArrayList<Profile> getProfiles() {
+        return profiles;
+    }
 }
 
