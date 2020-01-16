@@ -34,7 +34,7 @@ public class LoginView extends Application {
         Button logInButton = new Button("Log in");
         Button registerButton = new Button("Register");
 
-        LoginController loginctrl = new LoginController(textFieldEmail, textFieldPassword, errorLabel);
+        LoginController loginctrl = new LoginController(textFieldEmail, textFieldPassword, errorLabel, logInButton, registerButton);
         logInButton.setOnAction(loginctrl);
         logInButton.setOnAction(loginctrl);
 

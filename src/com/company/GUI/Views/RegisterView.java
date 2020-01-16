@@ -1,5 +1,6 @@
 package com.company.GUI.Views;
 
+import com.company.GUI.Controllers.RegisterController;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -36,6 +37,10 @@ public class RegisterView extends Application {
 
         Button confirmRegisterButton = new Button("Confirm Registration");
         Button cancelButton = new Button("Cancel");
+
+        RegisterController regctrl = new RegisterController(textFieldName, textFieldEmail, textFieldPassword, textFieldPasswordRepeat, textFieldStreetName, textFieldAddition, textFieldResidence);
+        confirmRegisterButton.setOnAction(regctrl);
+        cancelButton.setOnAction(regctrl);
 
         gridPaneRegister.setMinSize(400, 200);
         gridPaneRegister.setPadding(new Insets(10, 10, 10, 10));
