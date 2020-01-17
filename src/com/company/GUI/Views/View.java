@@ -1,6 +1,5 @@
 package com.company.GUI.Views;
 
-import com.company.GUI.Controllers.LoginController;
 import com.company.GUI.Controllers.RegisterController;
 import javafx.application.Application;
 import javafx.geometry.Insets;
@@ -169,8 +168,17 @@ public class View extends Application {
         //Hier worden alle button onClickActions aangeroepen en naar de controller verwezen.
 
         // Hier worden de knoppen voor de loginscene geregeld
-        LoginController loginctrl = new LoginController(textFieldEmail, textFieldPassword, errorLabel, logInButton, registerButton);
-        logInButton.setOnAction(loginctrl);
+
+        logInButton.setOnAction(event -> {
+            String email = "Blah@gmail.com";
+            String pw = "Beepboop";
+            if (textEmail.getText() == email && textPassword.getText() == pw){
+                primaryStage.setScene(ProfileScene);
+            } else {
+                textEmail.setText("");
+                textPassword.setText("");
+                errorLabel.setText("ERROR 404: Intelligence Not Found!");
+            }});
         registerButton.setOnAction(event -> {primaryStage.setScene(registerScene);});
 
         // Hier worden de knoppen voor de Registerscene geregeld
@@ -178,6 +186,9 @@ public class View extends Application {
         RegisterController regctrl = new RegisterController(textFieldName, textFieldEmail, textFieldPassword, textFieldPasswordRepeat, textFieldStreetName, textFieldAddition, textFieldResidence);
         confirmRegisterButton.setOnAction(regctrl);
         cancelButton.setOnAction(event -> { primaryStage.setScene(logInScene);});
+
+        // Hier worden de knoppen voor de profielen geregeld
+
 
 
     }
