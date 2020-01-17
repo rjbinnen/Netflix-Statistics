@@ -17,7 +17,7 @@ public class View extends Application {
         //Opens this when app is started -- Login view
 
         GridPane gridPaneHome = new GridPane();
-        Scene homeScene = new Scene(gridPaneHome);
+        Scene logInScene = new Scene(gridPaneHome);
         primaryStage.setTitle("Netflix Statistics - Log In");
 
         Text textEmail = new Text("E-mail");
@@ -139,7 +139,31 @@ public class View extends Application {
 
         primaryStage.setTitle("Netflix Statistics - Create Profile");
 
-        primaryStage.setScene(homeScene);
+        //Home view
+        GridPane gridPaneHomePage = new GridPane();
+        Scene homeScene = new Scene(gridPaneHomePage);
+
+        Button buttonHomeDeleteProfile = new Button("Delete Profile");
+
+        Text textHomeSeenPrograms = new Text("Programs you have watched: ");
+        Text textHomeRecommendedProgram = new Text("Recommended program: ");
+
+        Label labelHomeProfileName = new Label("-INSERT PROFILE NAME-");
+        Label labelHomeSeenPrograms = new Label("-INSERT WATCHED PROGRAMS");
+        Label labelHomeRecommendedProgram = new Label("-INSERT RECOMMENDED PROGRAM-");
+
+        gridPaneHomePage.setAlignment(Pos.CENTER);
+        gridPaneHomePage.add(labelHomeProfileName, 0, 0);
+        gridPaneHomePage.add(textHomeSeenPrograms, 0, 1);
+        gridPaneHomePage.add(labelHomeSeenPrograms, 1, 1);
+        gridPaneHomePage.add(textHomeRecommendedProgram, 0, 2);
+        gridPaneHomePage.add(labelHomeRecommendedProgram, 1, 2);
+        gridPaneHomePage.add(buttonHomeDeleteProfile, 0, 3);
+
+
+        primaryStage.setTitle("Netflix Statistics - Home");
+
+        primaryStage.setScene(logInScene);
         primaryStage.show();
 
         //Hier worden alle button onClickActions aangeroepen en naar de controller verwezen.
@@ -153,7 +177,7 @@ public class View extends Application {
 
         RegisterController regctrl = new RegisterController(textFieldName, textFieldEmail, textFieldPassword, textFieldPasswordRepeat, textFieldStreetName, textFieldAddition, textFieldResidence);
         confirmRegisterButton.setOnAction(regctrl);
-        cancelButton.setOnAction(event -> { primaryStage.setScene(homeScene);});
+        cancelButton.setOnAction(event -> { primaryStage.setScene(logInScene);});
 
 
     }

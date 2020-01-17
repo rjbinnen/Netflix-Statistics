@@ -4,38 +4,38 @@ import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.GridPane;
+import javafx.scene.control.Label;
+import javafx.scene.layout.GridPane;;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class testView extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
-        GridPane gridPaneCreateProfile = new GridPane();
-        Scene createProfileScene = new Scene(gridPaneCreateProfile);
+        GridPane gridPaneHomePage = new GridPane();
+        Scene homeScene = new Scene(gridPaneHomePage);
 
-        Text textCreateProfileName = new Text("Profile name: ");
-        Text textCreateProfileBirthDate = new Text("BirthDate");
+        Button buttonHomeDeleteProfile = new Button("Delete Profile");
 
-        TextField textFieldCreateProfileName = new TextField();
-        DatePicker datePickerCreateProfileBirthDate = new DatePicker();
+        Text textHomeSeenPrograms = new Text("Programs you have watched: ");
+        Text textHomeRecommendedProgram = new Text("Recommended program: ");
 
-        Button createProfileConfirm = new Button("Confirm");
-        Button createProfileCancel = new Button("Cancel");
+        Label labelHomeProfileName = new Label("-INSERT PROFILE NAME-");
+        Label labelHomeSeenPrograms = new Label("-INSERT WATCHED PROGRAMS");
+        Label labelHomeRecommendedProgram = new Label("-INSERT RECOMMENDED PROGRAM-");
 
-        gridPaneCreateProfile.setAlignment(Pos.CENTER);
-        gridPaneCreateProfile.add(textCreateProfileName, 0, 0);
-        gridPaneCreateProfile.add(textFieldCreateProfileName, 1, 0);
-        gridPaneCreateProfile.add(textCreateProfileBirthDate, 0, 1);
-        gridPaneCreateProfile.add(datePickerCreateProfileBirthDate, 1, 1);
-        gridPaneCreateProfile.add(createProfileConfirm, 0, 2);
-        gridPaneCreateProfile.add(createProfileCancel, 1, 2);
+        gridPaneHomePage.setAlignment(Pos.CENTER);
+        gridPaneHomePage.add(labelHomeProfileName, 0, 0);
+        gridPaneHomePage.add(textHomeSeenPrograms, 0, 1);
+        gridPaneHomePage.add(labelHomeSeenPrograms, 1, 1);
+        gridPaneHomePage.add(textHomeRecommendedProgram, 0, 2);
+        gridPaneHomePage.add(labelHomeRecommendedProgram, 1, 2);
+        gridPaneHomePage.add(buttonHomeDeleteProfile, 0, 3);
 
-        primaryStage.setTitle("Netflix Statistics - Create Profile");
 
-        primaryStage.setScene(createProfileScene);
+        primaryStage.setTitle("Netflix Statistics - Home");
+
+        primaryStage.setScene(homeScene);
         primaryStage.show();
     }
 }
