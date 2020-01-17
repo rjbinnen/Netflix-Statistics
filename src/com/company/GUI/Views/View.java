@@ -6,10 +6,7 @@ import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -96,7 +93,7 @@ public class View extends Application {
         gridPaneRegister.add(cancelButton, 1, 7);
 
 
-        // Idk of deze meteen geactiveerd moet worden. primaryStage.setTitle("Netflix Statistics - Register");
+       primaryStage.setTitle("Netflix Statistics - Register");
 
         //Profile view
         GridPane gridPaneProfile = new GridPane();
@@ -117,7 +114,30 @@ public class View extends Application {
         gridPaneProfile.add(profile4, 1, 1);
         gridPaneProfile.add(createProfile, 0, 2);
 
-        // Idk of deze meteen geactiveerd moet worden. primaryStage.setTitle("Netflix Statistics - Choose Profile");
+        primaryStage.setTitle("Netflix Statistics - Choose Profile");
+
+        //Create profile view
+        GridPane gridPaneCreateProfile = new GridPane();
+        Scene createProfileScene = new Scene(gridPaneCreateProfile);
+
+        Text textCreateProfileName = new Text("Profile name: ");
+        Text textCreateProfileBirthDate = new Text("BirthDate");
+
+        TextField textFieldCreateProfileName = new TextField();
+        DatePicker datePickerCreateProfileBirthDate = new DatePicker();
+
+        Button createProfileConfirm = new Button("Confirm");
+        Button createProfileCancel = new Button("Cancel");
+
+        gridPaneCreateProfile.setAlignment(Pos.CENTER);
+        gridPaneCreateProfile.add(textCreateProfileName, 0, 0);
+        gridPaneCreateProfile.add(textFieldCreateProfileName, 1, 0);
+        gridPaneCreateProfile.add(textCreateProfileBirthDate, 0, 1);
+        gridPaneCreateProfile.add(datePickerCreateProfileBirthDate, 1, 1);
+        gridPaneCreateProfile.add(createProfileConfirm, 0, 2);
+        gridPaneCreateProfile.add(createProfileCancel, 1, 2);
+
+        primaryStage.setTitle("Netflix Statistics - Create Profile");
 
         primaryStage.setScene(homeScene);
         primaryStage.show();
@@ -134,6 +154,8 @@ public class View extends Application {
         RegisterController regctrl = new RegisterController(textFieldName, textFieldEmail, textFieldPassword, textFieldPasswordRepeat, textFieldStreetName, textFieldAddition, textFieldResidence);
         confirmRegisterButton.setOnAction(regctrl);
         cancelButton.setOnAction(event -> { primaryStage.setScene(homeScene);});
+
+
     }
 
 
