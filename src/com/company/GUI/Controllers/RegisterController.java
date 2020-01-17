@@ -5,6 +5,8 @@ import javafx.event.EventHandler;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
+import java.util.regex.Pattern;
+
 
 public class RegisterController implements EventHandler<ActionEvent> {
 
@@ -26,20 +28,40 @@ public class RegisterController implements EventHandler<ActionEvent> {
         this.resName = resName;
     }
 
+    public void registerValidation() {
+        //controleert input
+
+        //Voornaam + Achternaam
+        boolean nameOK = Pattern.matches("(\\b[A-Z]{1}[a-z]+)( )([A-Z]{1}[a-z]+\\b)", tfName.getText());
+
+        //Password
+        boolean passwordOK = pwmake.getLength() > 7;
+
+        //Herhaalde password en controle
+        boolean repeatOK = pwrepeat.getText().equals(pwmake.getText());
+
+        //Straatnaam
+        boolean streetOK = Pattern.matches("^[A-Z].*", strName.getText());
+
+        //Huisnummer
+        boolean numberOK = Pattern.matches("[0-9]+", addition.getText());
+
+        //Woonplaats
+        boolean residenceOK = Pattern.matches("^[A-Z].*", resName.getText());
+
+        //email
+        boolean emailOK = Pattern.matches("^[\\w!#$%&'*+/=?`{|}~^-]+(?:\\.[\\w!#$%&'*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$", tfemail.getText());
+
+        if (emailOK && residenceOK && numberOK && streetOK && repeatOK && passwordOK && nameOK) {
+            System.out.println("Registration succesfull");
+        }
+    }
+
+
     @Override
     public void handle(ActionEvent event) {
-        String name = tfName.getText();
-        String email = tfemail.getText();
-        String pw = pwmake.getText();
-        String pwr = pwrepeat.getText();
-        String sName = strName.getText();
-        String add = addition.getText();
-        String rName = resName.getText();
+        registerValidation();
 
-        if (pw == pwr){
-            System.out.println("Registration succesfull");
-        } else {
-            System.out.println("Can't you even remember a single password?");
-        }
+
     }
 }
