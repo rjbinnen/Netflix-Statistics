@@ -34,10 +34,6 @@ public class View extends Application {
         Button logInButton = new Button("Log in");
         Button registerButton = new Button("Register");
 
-        LoginController loginctrl = new LoginController(textFieldEmail, textFieldPassword, errorLabel, logInButton, registerButton);
-        logInButton.setOnAction(loginctrl);
-        registerButton.setOnAction(loginctrl);
-
         gridPaneHome.setMinSize(400, 200);
         gridPaneHome.setPadding(new Insets(10, 10, 10, 10));
         gridPaneHome.setVgap(5);
@@ -75,10 +71,6 @@ public class View extends Application {
 
         Button confirmRegisterButton = new Button("Confirm Registration");
         Button cancelButton = new Button("Cancel");
-
-        RegisterController regctrl = new RegisterController(textFieldName, textFieldEmail, textFieldPassword, textFieldPasswordRepeat, textFieldStreetName, textFieldAddition, textFieldResidence);
-        confirmRegisterButton.setOnAction(regctrl);
-        cancelButton.setOnAction(regctrl);
 
         gridPaneRegister.setMinSize(400, 200);
         gridPaneRegister.setPadding(new Insets(10, 10, 10, 10));
@@ -129,6 +121,19 @@ public class View extends Application {
 
         primaryStage.setScene(homeScene);
         primaryStage.show();
+
+        //Hier worden alle button onClickActions aangeroepen en naar de controller verwezen.
+
+        // Hier worden de knoppen voor de loginscene geregeld
+        LoginController loginctrl = new LoginController(textFieldEmail, textFieldPassword, errorLabel, logInButton, registerButton);
+        logInButton.setOnAction(loginctrl);
+        registerButton.setOnAction(event -> {primaryStage.setScene(registerScene);});
+
+        // Hier worden de knoppen voor de Registerscene geregeld
+
+        RegisterController regctrl = new RegisterController(textFieldName, textFieldEmail, textFieldPassword, textFieldPasswordRepeat, textFieldStreetName, textFieldAddition, textFieldResidence);
+        confirmRegisterButton.setOnAction(regctrl);
+        cancelButton.setOnAction(event -> { primaryStage.setScene(homeScene);});
     }
 
 

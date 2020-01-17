@@ -28,6 +28,18 @@ public class RegisterController implements EventHandler<ActionEvent> {
 
     @Override
     public void handle(ActionEvent event) {
+        String name = tfName.getText();
+        String email = tfemail.getText();
+        String pw = pwmake.getText();
+        String pwr = pwrepeat.getText();
+        String sName = strName.getText();
+        String add = addition.getText();
+        String rName = resName.getText();
 
+        if (pw == pwr){
+            System.out.println("Registration succesfull");
+        } else {
+            System.out.println("Can't you even remember a single password?");
+        }
     }
 }
