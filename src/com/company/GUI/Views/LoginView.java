@@ -36,7 +36,7 @@ public class LoginView extends Application {
 
         LoginController loginctrl = new LoginController(textFieldEmail, textFieldPassword, errorLabel, logInButton, registerButton);
         logInButton.setOnAction(loginctrl);
-        logInButton.setOnAction(loginctrl);
+        registerButton.setOnAction(loginctrl);
 
         gridPaneHome.setMinSize(400, 200);
         gridPaneHome.setPadding(new Insets(10, 10, 10, 10));

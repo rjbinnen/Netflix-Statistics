@@ -2,10 +2,12 @@ package com.company.GUI.Controllers;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 public class LoginController implements EventHandler<ActionEvent> {
     private TextField field;
@@ -13,13 +15,19 @@ public class LoginController implements EventHandler<ActionEvent> {
     private Label label;
     private Button loginbtn;
     private Button regbtn;
+    private Scene scene;
 
-    public LoginController(TextField field, PasswordField pwfield, Label label, Button loginbtn, Button regbtn ) {
+
+    public LoginController(TextField field, PasswordField pwfield, Label label, Button loginbtn, Button regbtn) {
     this.field = field;
     this.pwfield = pwfield;
     this.label = label;
     this.loginbtn = loginbtn;
     this.regbtn = regbtn;
+    }
+
+    public void setScene(Scene scene) {
+        this.scene = scene;
     }
 
 
@@ -34,6 +42,7 @@ public class LoginController implements EventHandler<ActionEvent> {
             pwfield.clear();
             label.setText("ERROR 404: Intelligence Not Found!");
         }
+
 
     }
 

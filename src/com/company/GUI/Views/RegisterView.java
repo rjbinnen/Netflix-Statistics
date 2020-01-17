@@ -1,5 +1,6 @@
 package com.company.GUI.Views;
 
+import com.company.GUI.Controllers.LoginController;
 import com.company.GUI.Controllers.RegisterController;
 import javafx.application.Application;
 import javafx.geometry.Insets;
