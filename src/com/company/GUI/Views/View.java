@@ -54,6 +54,7 @@ public class View extends Application {
         Text textRegisterPassword = new Text("Password");
         Text textPasswordRepeat = new Text("Repeat Password");
         Text textStreetName = new Text("Streetname");
+        Text textHouseNumber = new Text("House number");
         Text textAddition = new Text("Addition");
         Text textCity = new Text("City");
 
@@ -62,8 +63,9 @@ public class View extends Application {
         PasswordField textFieldRegisterPassword = new PasswordField();
         PasswordField textFieldPasswordRepeat = new PasswordField();
         TextField textFieldStreetName = new TextField();
+        TextField textFieldHouseNumber = new TextField();
         TextField textFieldAddition = new TextField();
-        TextField textfieldCity = new TextField();
+        TextField textFieldCity = new TextField();
 
         Button confirmRegisterButton = new Button("Confirm Registration");
         Button cancelButton = new Button("Cancel");
@@ -84,12 +86,14 @@ public class View extends Application {
         gridPaneRegister.add(textFieldPasswordRepeat, 1, 3);
         gridPaneRegister.add(textStreetName, 0, 4);
         gridPaneRegister.add(textFieldStreetName, 1, 4);
-        gridPaneRegister.add(textAddition, 0, 5);
-        gridPaneRegister.add(textFieldAddition, 1, 5);
-        gridPaneRegister.add(textCity, 0, 6);
-        gridPaneRegister.add(textfieldCity, 1, 6);
-        gridPaneRegister.add(confirmRegisterButton, 0, 7);
-        gridPaneRegister.add(cancelButton, 1, 7);
+        gridPaneRegister.add(textHouseNumber, 0, 5);
+        gridPaneRegister.add(textFieldHouseNumber, 1, 5);
+        gridPaneRegister.add(textAddition, 0, 6);
+        gridPaneRegister.add(textFieldAddition, 1, 6);
+        gridPaneRegister.add(textCity, 0, 7);
+        gridPaneRegister.add(textFieldCity, 1, 7);
+        gridPaneRegister.add(confirmRegisterButton, 0, 8);
+        gridPaneRegister.add(cancelButton, 1, 8);
 
 
        primaryStage.setTitle("Netflix Statistics - Register");
@@ -99,7 +103,7 @@ public class View extends Application {
         Scene ProfileScene = new Scene(gridPaneProfile);
 
 
-        //Insert naam profielen + klik naar ander scherm idfk
+        //Insert naam profielen + klik naar ander scherm
         Button profile1 = new Button();
         Button profile2 = new Button();
         Button profile3 = new Button();
@@ -183,7 +187,7 @@ public class View extends Application {
 
         // Hier worden de knoppen voor de Registerscene geregeld
 
-        RegisterController regctrl = new RegisterController(textFieldName, textFieldEmail, textFieldPassword, textFieldPasswordRepeat, textFieldStreetName, textFieldAddition, textfieldCity);
+        RegisterController regctrl = new RegisterController(textFieldName, textFieldEmail, textFieldPassword, textFieldPasswordRepeat, textFieldStreetName, textFieldAddition, textFieldCity);
         confirmRegisterButton.setOnAction(regctrl);
         cancelButton.setOnAction(event -> { primaryStage.setScene(logInScene);});
 
