@@ -55,7 +55,7 @@ public class View extends Application {
         Text textPasswordRepeat = new Text("Repeat Password");
         Text textStreetName = new Text("Streetname");
         Text textAddition = new Text("Addition");
-        Text textResidence = new Text("Residence");
+        Text textCity = new Text("City");
 
         TextField textFieldName = new TextField();
         TextField textFieldRegisterEmail = new TextField();
@@ -63,7 +63,7 @@ public class View extends Application {
         PasswordField textFieldPasswordRepeat = new PasswordField();
         TextField textFieldStreetName = new TextField();
         TextField textFieldAddition = new TextField();
-        TextField textFieldResidence = new TextField();
+        TextField textfieldCity = new TextField();
 
         Button confirmRegisterButton = new Button("Confirm Registration");
         Button cancelButton = new Button("Cancel");
@@ -86,8 +86,8 @@ public class View extends Application {
         gridPaneRegister.add(textFieldStreetName, 1, 4);
         gridPaneRegister.add(textAddition, 0, 5);
         gridPaneRegister.add(textFieldAddition, 1, 5);
-        gridPaneRegister.add(textResidence, 0, 6);
-        gridPaneRegister.add(textFieldResidence, 1, 6);
+        gridPaneRegister.add(textCity, 0, 6);
+        gridPaneRegister.add(textfieldCity, 1, 6);
         gridPaneRegister.add(confirmRegisterButton, 0, 7);
         gridPaneRegister.add(cancelButton, 1, 7);
 
@@ -183,7 +183,7 @@ public class View extends Application {
 
         // Hier worden de knoppen voor de Registerscene geregeld
 
-        RegisterController regctrl = new RegisterController(textFieldName, textFieldEmail, textFieldPassword, textFieldPasswordRepeat, textFieldStreetName, textFieldAddition, textFieldResidence);
+        RegisterController regctrl = new RegisterController(textFieldName, textFieldEmail, textFieldPassword, textFieldPasswordRepeat, textFieldStreetName, textFieldAddition, textfieldCity);
         confirmRegisterButton.setOnAction(regctrl);
         cancelButton.setOnAction(event -> { primaryStage.setScene(logInScene);});
 
