@@ -7,7 +7,7 @@ public class Account {
     private String streetname;
     private int houseNumber;
     private String addition;
-    private String City;
+    private String city;
     private ArrayList<Profile> profiles;
 
     public Account(String name, String streetname, int houseNumber, String addition, String City, ArrayList<Profile> profiles) {
@@ -15,7 +15,7 @@ public class Account {
         this.streetname = streetname;
         this.houseNumber = houseNumber;
         this.addition = addition;
-        this.City = City;
+        this.city = City;
         this.profiles = profiles;
     }
 
@@ -40,7 +40,7 @@ public class Account {
     }
 
     public String getCity() {
-        return City;
+        return city;
     }
 
     public ArrayList<Profile> getProfiles() {
@@ -53,7 +53,7 @@ public class Account {
                 "name='" + name + '\'' +
                 ", streetname='" + streetname + '\'' +
                 ", addition='" + addition + '\'' +
-                ", City='" + City + '\'' +
+                ", city='" + city + '\'' +
                 ", profiles=" + profiles +
                 '}';
     }
