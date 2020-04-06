@@ -8,6 +8,8 @@ public class Program {
     private String language;
     private int ageIndicator;
 
+
+
     public Program(String title, int duration, Program similarProgram, String genre, String language, int ageIndicator) {
         this.title = title;
         this.duration = duration;
