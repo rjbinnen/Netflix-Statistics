@@ -172,12 +172,12 @@ public class View extends Application {
         logInButton.setOnAction(event -> {
             String email = "Blah@gmail.com";
             String pw = "Beepboop";
-            if (textEmail.getText() == email && textPassword.getText() == pw){
+            if (textEmail.getText().equals(email) && textPassword.getText().equals(pw)){
                 primaryStage.setScene(ProfileScene);
             } else {
                 textEmail.setText("");
                 textPassword.setText("");
-                errorLabel.setText("ERROR 404: Intelligence Not Found!");
+                errorLabel.setText("Wrong username and password");
             }});
         registerButton.setOnAction(event -> {primaryStage.setScene(registerScene);});
 
