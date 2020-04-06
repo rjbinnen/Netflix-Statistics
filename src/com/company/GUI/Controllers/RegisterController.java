@@ -47,13 +47,13 @@ public class RegisterController implements EventHandler<ActionEvent> {
         boolean numberOK = Pattern.matches("[0-9]+", addition.getText());
 
         //Woonplaats
-        boolean residenceOK = Pattern.matches("^[A-Z].*", resName.getText());
+        boolean cityOK = Pattern.matches("^[A-Z].*", resName.getText());
 
         //email
         boolean emailOK = Pattern.matches("^[\\w!#$%&'*+/=?`{|}~^-]+(?:\\.[\\w!#$%&'*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$", tfemail.getText());
 
-        if (emailOK && residenceOK && numberOK && streetOK && repeatOK && passwordOK && nameOK) {
-            System.out.println("Registration succesfull");
+        if (emailOK && cityOK && numberOK && streetOK && repeatOK && passwordOK && nameOK) {
+            System.out.println("Registration successful");
         }
     }
 

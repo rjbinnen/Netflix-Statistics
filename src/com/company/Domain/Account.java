@@ -1,19 +1,21 @@
-package com.company;
+package com.company.Domain;
 
 import java.util.ArrayList;
 
 public class Account {
     private String name;
     private String streetname;
+    private int houseNumber;
     private String addition;
-    private String residence;
+    private String city;
     private ArrayList<Profile> profiles;
 
-    public Account(String name, String streetname, String addition, String residence, ArrayList<Profile> profiles) {
+    public Account(String name, String streetname, int houseNumber, String addition, String City, ArrayList<Profile> profiles) {
         this.name = name;
         this.streetname = streetname;
+        this.houseNumber = houseNumber;
         this.addition = addition;
-        this.residence = residence;
+        this.city = City;
         this.profiles = profiles;
     }
 
@@ -37,8 +39,8 @@ public class Account {
         return addition;
     }
 
-    public String getResidence() {
-        return residence;
+    public String getCity() {
+        return city;
     }
 
     public ArrayList<Profile> getProfiles() {
@@ -51,7 +53,7 @@ public class Account {
                 "name='" + name + '\'' +
                 ", streetname='" + streetname + '\'' +
                 ", addition='" + addition + '\'' +
-                ", residence='" + residence + '\'' +
+                ", city='" + city + '\'' +
                 ", profiles=" + profiles +
                 '}';
     }
