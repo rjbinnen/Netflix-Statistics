@@ -42,7 +42,7 @@ public class View extends Application {
         gridPaneHome.add(textFieldPassword, 1, 1);
         gridPaneHome.add(logInButton, 0, 2);
         gridPaneHome.add(registerButton, 1,2);
-        gridPaneHome.add(errorLabel, 0, 4);
+        gridPaneHome.add(errorLabel, 1, 4);
 
         //Register view
         GridPane gridPaneRegister = new GridPane();
@@ -176,11 +176,11 @@ public class View extends Application {
         logInButton.setOnAction(event -> {
             String email = "Blah@gmail.com";
             String pw = "Beepboop";
-            if (textEmail.getText().equals(email) && textPassword.getText().equals(pw)){
+            if (textFieldEmail.getText().equals(email) && textFieldPassword.getText().equals(pw)){
                 primaryStage.setScene(ProfileScene);
             } else {
-                textEmail.setText(null);
-                textPassword.setText(null);
+                textFieldEmail.setText("");
+                textFieldPassword.setText("");
                 errorLabel.setText("Wrong username and password");
             }});
         registerButton.setOnAction(event -> {
