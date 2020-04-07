@@ -42,7 +42,7 @@ public class View extends Application {
         gridPaneHome.add(textFieldPassword, 1, 1);
         gridPaneHome.add(logInButton, 0, 2);
         gridPaneHome.add(registerButton, 1,2);
-        gridPaneHome.add(errorLabel, 0, 3);
+        gridPaneHome.add(errorLabel, 0, 4);
 
         //Register view
         GridPane gridPaneRegister = new GridPane();
@@ -179,11 +179,13 @@ public class View extends Application {
             if (textEmail.getText().equals(email) && textPassword.getText().equals(pw)){
                 primaryStage.setScene(ProfileScene);
             } else {
-                textEmail.setText("");
-                textPassword.setText("");
+                textEmail.setText(null);
+                textPassword.setText(null);
                 errorLabel.setText("Wrong username and password");
             }});
-        registerButton.setOnAction(event -> {primaryStage.setScene(registerScene);});
+        registerButton.setOnAction(event -> {
+            errorLabel.setText("");
+            primaryStage.setScene(registerScene);});
 
         // Hier worden de knoppen voor de Registerscene geregeld
 
