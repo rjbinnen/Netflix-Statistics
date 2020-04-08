@@ -13,8 +13,8 @@ import javafx.stage.Stage;
 
 public class View extends Application {
     @Override
+    @SuppressWarnings("Duplicates")
     public void start(Stage primaryStage) throws Exception {
-
 
         Episode episode = new Episode(5, 60, 30);
         System.out.println(episode.percWatchTime());
@@ -105,7 +105,7 @@ public class View extends Application {
 
         //Profile view
         GridPane gridPaneProfile = new GridPane();
-        Scene ProfileScene = new Scene(gridPaneProfile);
+        Scene profileScene = new Scene(gridPaneProfile);
         gridPaneProfile.setMinSize(400, 200);
 
 
@@ -114,14 +114,22 @@ public class View extends Application {
         Button profile2 = new Button();
         Button profile3 = new Button();
         Button profile4 = new Button();
+        Label emptyLabel = new Label();
+        Label emptyLabel2 = new Label();
 
         Button createProfile = new Button("Create Profile");
+        Button logOutAccount = new Button("Log out");
+
         gridPaneProfile.setAlignment(Pos.CENTER);
         gridPaneProfile.add(profile1, 0, 0);
-        gridPaneProfile.add(profile2, 1, 0);
-        gridPaneProfile.add(profile3, 0, 1);
-        gridPaneProfile.add(profile4, 1, 1);
-        gridPaneProfile.add(createProfile, 0, 2);
+        gridPaneProfile.add(profile2, 2, 0);
+        gridPaneProfile.add(emptyLabel, 0, 1);
+        gridPaneProfile.add(profile3, 0, 2);
+        gridPaneProfile.add(profile4, 2, 2);
+        gridPaneProfile.add(emptyLabel2, 0, 3);
+        gridPaneProfile.add(logOutAccount, 0, 4);
+        gridPaneProfile.add(createProfile, 3, 4);
+
 
         primaryStage.setTitle("Netflix Statistics - Choose Profile");
 
@@ -183,7 +191,7 @@ public class View extends Application {
             String email = "Blah@gmail.com";
             String pw = "Beepboop";
             if (textFieldEmail.getText().equals(email) && textFieldPassword.getText().equals(pw)){
-                primaryStage.setScene(ProfileScene);
+                primaryStage.setScene(profileScene);
             } else {
                 textFieldEmail.setText("");
                 textFieldPassword.setText("");
@@ -256,11 +264,11 @@ public class View extends Application {
 
             textFieldCreateProfileName.clear();
             datePickerCreateProfileBirthDate.setValue(null);
-            primaryStage.setScene(ProfileScene);
+            primaryStage.setScene(profileScene);
         });
 
         createProfileCancel.setOnAction(event -> {
-            primaryStage.setScene(ProfileScene);
+            primaryStage.setScene(profileScene);
         });
     }
 
