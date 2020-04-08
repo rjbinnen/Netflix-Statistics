@@ -217,7 +217,7 @@ public class View extends Application {
 
         confirmRegisterButton.setOnAction(event -> {
             //controleert input
-            RegisterController regctrl = new RegisterController(textFieldName, textFieldEmail, textFieldPassword, textFieldPasswordRepeat, textFieldStreetName, textFieldHouseNumber, textFieldAddition, textFieldCity);
+            RegisterController regctrl = new RegisterController(textFieldName, textFieldRegisterEmail, textFieldRegisterPassword, textFieldPasswordRepeat, textFieldStreetName, textFieldHouseNumber, textFieldAddition, textFieldCity);
             Account account = regctrl.registerValidation();
             if (!account.getName().equals("Failed to register Account")) {
                 System.out.println("Registration successful");
