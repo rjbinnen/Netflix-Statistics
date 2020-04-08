@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="86036263-9891-43ef-b0ab-bc1c88660fc3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Netflix-Statistics/com/company/Domain/Profile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Netflix-Statistics/com/company/Domain/Profile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Domain/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Domain/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Domain/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Domain/Profile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/GUI/Controllers/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/GUI/Controllers/RegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/GUI/Views/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/GUI/Views/View.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/GUI/Views/View.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1150">
-              <caret line="246" column="43" selection-start-line="246" selection-start-column="43" selection-end-line="246" selection-end-column="43" />
+            <state relative-caret-position="-640">
+              <caret line="251" column="20" lean-forward="true" selection-start-line="251" selection-start-column="20" selection-end-line="251" selection-end-column="20" />
               <folding>
                 <element signature="e#566#597#0" expanded="true" />
               </folding>
@@ -33,8 +28,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/GUI/Controllers/RegisterController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="61" column="5" lean-forward="true" selection-start-line="34" selection-start-column="8" selection-end-line="61" selection-end-column="5" />
+            <state relative-caret-position="870">
+              <caret line="68" column="29" lean-forward="true" selection-start-line="68" selection-start-column="29" selection-end-line="68" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -194,7 +189,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1586348357442" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1586348415838" />
     <property name="last_opened_file_path" value="G:/IN 1.3/software architectuur &amp; design/Library_DummyData" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -412,7 +407,28 @@
       <option name="project" value="LOCAL" />
       <updated>1586262154370</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="logout knop en ander profiel knop werkend gemaakt">
+      <created>1586348208727</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1586348208727</updated>
+    </task>
+    <task id="LOCAL-00015" summary="logout knop en ander profiel knop werkend gemaakt">
+      <created>1586348364345</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1586348364345</updated>
+    </task>
+    <task id="LOCAL-00016" summary="logout knop en ander profiel knop werkend gemaakt">
+      <created>1586348370469</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1586348370469</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -431,7 +447,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49930844" visible="true" weight="0.32577905" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49930844" weight="0.32577905" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -496,7 +512,8 @@
     <MESSAGE value="test" />
     <MESSAGE value="weet niet meer wat ik aan het doen ben" />
     <MESSAGE value="verbeterde login GUI" />
-    <option name="LAST_COMMIT_MESSAGE" value="verbeterde login GUI" />
+    <MESSAGE value="logout knop en ander profiel knop werkend gemaakt" />
+    <option name="LAST_COMMIT_MESSAGE" value="logout knop en ander profiel knop werkend gemaakt" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Netflix-Statistics.iml">
@@ -579,8 +596,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/GUI/Controllers/RegisterController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="61" column="5" lean-forward="true" selection-start-line="34" selection-start-column="8" selection-end-line="61" selection-end-column="5" />
+        <state relative-caret-position="870">
+          <caret line="68" column="29" lean-forward="true" selection-start-line="68" selection-start-column="29" selection-end-line="68" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -596,8 +613,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/GUI/Views/View.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1150">
-          <caret line="246" column="43" selection-start-line="246" selection-start-column="43" selection-end-line="246" selection-end-column="43" />
+        <state relative-caret-position="-640">
+          <caret line="251" column="20" lean-forward="true" selection-start-line="251" selection-start-column="20" selection-end-line="251" selection-end-column="20" />
           <folding>
             <element signature="e#566#597#0" expanded="true" />
           </folding>
