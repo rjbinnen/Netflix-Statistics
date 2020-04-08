@@ -305,7 +305,7 @@ public class View extends Application {
             } else if (profile4.getText().equals("")) {
                 Profile profile = new Profile(textFieldCreateProfileName.getText(), datePickerCreateProfileBirthDate.getValue(), null);
                 profile4.setText(profile.getName());
-                account.addProfile(profile);
+                    account.addProfile(profile);
             }
 
             textFieldCreateProfileName.clear();
