@@ -1,5 +1,6 @@
 package com.company.GUI.Views;
 
+import com.company.Domain.Episode;
 import com.company.GUI.Controllers.RegisterController;
 import javafx.application.Application;
 import javafx.geometry.Insets;
@@ -13,6 +14,10 @@ import javafx.stage.Stage;
 public class View extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
+
+
+        Episode episode = new Episode(5, 60, 30);
+        System.out.println(episode.percWatchTime());
         //Opens this when app is started -- Login view
 
         GridPane gridPaneHome = new GridPane();
@@ -198,7 +203,7 @@ public class View extends Application {
 
         profile1.setOnAction(event -> {
             if (profile1.getText().equals("")){
-                primaryStage.setScene(createProfileScene);
+
             } else {
                 primaryStage.setScene(homeScene);
             }
@@ -207,7 +212,7 @@ public class View extends Application {
 
         profile2.setOnAction(event -> {
             if (profile2.getText().equals("")){
-                primaryStage.setScene(createProfileScene);
+
             } else {
                 primaryStage.setScene(homeScene);
             }
@@ -216,7 +221,7 @@ public class View extends Application {
 
         profile3.setOnAction(event -> {
             if (profile3.getText().equals("")){
-                primaryStage.setScene(createProfileScene);
+
             } else {
                 primaryStage.setScene(homeScene);
             }
@@ -225,11 +230,37 @@ public class View extends Application {
 
         profile4.setOnAction(event -> {
             if (profile4.getText().equals("")){
-                primaryStage.setScene(createProfileScene);
-            } else {
+
+                } else {
                 primaryStage.setScene(homeScene);
             }
 
+        });
+
+        createProfile.setOnAction(event -> {
+            primaryStage.setScene(createProfileScene);
+        });
+
+        //Hier worden de knoppen voor het creëren van een profiel geregeld
+
+        createProfileConfirm.setOnAction(event -> {
+            if (profile1.getText().equals("")){
+                profile1.setText(textFieldCreateProfileName.getText());
+            } else if (profile2.getText().equals("")){
+                profile2.setText(textFieldCreateProfileName.getText());
+            } else if (profile3.getText().equals("")) {
+                profile3.setText(textFieldCreateProfileName.getText());
+            } else if (profile4.getText().equals("")) {
+                profile4.setText(textFieldCreateProfileName.getText());
+            }
+
+            textFieldCreateProfileName.clear();
+            datePickerCreateProfileBirthDate.setValue(null);
+            primaryStage.setScene(ProfileScene);
+        });
+
+        createProfileCancel.setOnAction(event -> {
+            primaryStage.setScene(ProfileScene);
         });
     }
 
