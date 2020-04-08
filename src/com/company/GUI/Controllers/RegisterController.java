@@ -1,5 +1,6 @@
 package com.company.GUI.Controllers;
 
+import com.company.Domain.Account;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.PasswordField;
@@ -17,8 +18,9 @@ public class RegisterController implements EventHandler<ActionEvent> {
     private TextField strName;
     private TextField addition;
     private TextField resName;
+    private TextField hsNmbr;
 
-    public RegisterController(TextField tfName, TextField tfemail, PasswordField pwmake, PasswordField pwrepeat, TextField strName, TextField addition, TextField resName) {
+    public RegisterController(TextField tfName, TextField tfemail, PasswordField pwmake, PasswordField pwrepeat, TextField strName, TextField hsNmbr, TextField addition, TextField resName) {
         this.tfName = tfName;
         this.tfemail = tfemail;
         this.pwmake = pwmake;
@@ -26,6 +28,7 @@ public class RegisterController implements EventHandler<ActionEvent> {
         this.strName = strName;
         this.addition = addition;
         this.resName = resName;
+        this.hsNmbr = hsNmbr;
     }
 
     public void registerValidation() {
@@ -44,7 +47,7 @@ public class RegisterController implements EventHandler<ActionEvent> {
         boolean streetOK = Pattern.matches("^[A-Z].*", strName.getText());
 
         //Huisnummer
-        boolean numberOK = Pattern.matches("[0-9]+", addition.getText());
+        boolean numberOK = Pattern.matches("[0-9]+", hsNmbr.getText());
 
         //Woonplaats
         boolean cityOK = Pattern.matches("^[A-Z].*", resName.getText());
@@ -54,6 +57,7 @@ public class RegisterController implements EventHandler<ActionEvent> {
 
         if (emailOK && cityOK && numberOK && streetOK && repeatOK && passwordOK && nameOK) {
             System.out.println("Registration successful");
+            Account account = new Account(tfName.getText(), strName.getText(), Integer.parseInt(hsNmbr.getText()), addition.getText(), resName.getText(), null);
         }
     }
 

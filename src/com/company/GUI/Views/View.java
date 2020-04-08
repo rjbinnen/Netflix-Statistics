@@ -1,6 +1,8 @@
 package com.company.GUI.Views;
 
+import com.company.Domain.Account;
 import com.company.Domain.Episode;
+import com.company.Domain.Profile;
 import com.company.GUI.Controllers.RegisterController;
 import javafx.application.Application;
 import javafx.geometry.Insets;
@@ -11,10 +13,17 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+import java.util.regex.Pattern;
+
 public class View extends Application {
+
+    private Account account;
+
     @Override
     @SuppressWarnings("Duplicates")
     public void start(Stage primaryStage) throws Exception {
+
+
 
         Episode episode = new Episode(5, 60, 30);
         System.out.println(episode.percWatchTime());
@@ -205,8 +214,43 @@ public class View extends Application {
 
         // Hier worden de knoppen voor de Registerscene geregeld
 
-        RegisterController regctrl = new RegisterController(textFieldName, textFieldEmail, textFieldPassword, textFieldPasswordRepeat, textFieldStreetName, textFieldAddition, textFieldCity);
-        confirmRegisterButton.setOnAction(regctrl);
+        //RegisterController regctrl = new RegisterController(textFieldName, textFieldEmail, textFieldPassword, textFieldPasswordRepeat, textFieldStreetName, textFieldHouseNumber, textFieldAddition, textFieldCity);
+        confirmRegisterButton.setOnAction(event -> {
+            //controleert input
+
+            //Voornaam + Achternaam
+            boolean nameOK = Pattern.matches("(\\b[A-Z]{1}[a-z]+)( )([A-Z]{1}[a-z]+\\b)", textFieldName.getText());
+
+            //Password
+            boolean passwordOK = textFieldPassword.getLength() > 7;
+
+            //Herhaalde password en controle
+            boolean repeatOK = textFieldPasswordRepeat.getText().equals(textFieldPassword.getText());
+
+            //Straatnaam
+            boolean streetOK = Pattern.matches("^[A-Z].*", textFieldStreetName.getText());
+
+            //Huisnummer
+            boolean numberOK = Pattern.matches("[0-9]+", textFieldHouseNumber.getText());
+
+            //Woonplaats
+            boolean cityOK = Pattern.matches("^[A-Z].*", textFieldCity.getText());
+
+            //email
+            boolean emailOK = Pattern.matches("^[\\w!#$%&'*+/=?`{|}~^-]+(?:\\.[\\w!#$%&'*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$", textFieldEmail.getText());
+
+            if (emailOK && cityOK && numberOK && streetOK && repeatOK && passwordOK && nameOK) {
+                System.out.println("Registration successful");
+                account = new Account(textFieldName.getText(), textFieldStreetName.getText(), Integer.parseInt(textFieldHouseNumber.getText()), textFieldAddition.getText(), textFieldCity.getText(), null);
+                primaryStage.setScene(logInScene);
+            } else {
+                System.out.println("fialure");
+            }
+
+
+        }
+        );
+
         cancelButton.setOnAction(event -> { primaryStage.setScene(logInScene);});
 
         // Hier worden de knoppen voor de profielen geregeld
@@ -216,6 +260,7 @@ public class View extends Application {
 
             } else {
                 primaryStage.setScene(homeScene);
+                labelHomeProfileName.setText(profile1.getText());
             }
 
         });
@@ -225,6 +270,7 @@ public class View extends Application {
 
             } else {
                 primaryStage.setScene(homeScene);
+                labelHomeProfileName.setText(profile2.getText());
             }
 
         });
@@ -234,6 +280,7 @@ public class View extends Application {
 
             } else {
                 primaryStage.setScene(homeScene);
+                labelHomeProfileName.setText(profile3.getText());
             }
 
         });
@@ -243,25 +290,40 @@ public class View extends Application {
 
                 } else {
                 primaryStage.setScene(homeScene);
+                labelHomeProfileName.setText(profile4.getText());
+
             }
 
         });
 
         createProfile.setOnAction(event -> {
-            primaryStage.setScene(createProfileScene);
+            if (profile4.getText().equals("")){
+                primaryStage.setScene(createProfileScene);
+            } else {
+
+            }
         });
 
         //Hier worden de knoppen voor het creëren van een profiel geregeld
 
+
         createProfileConfirm.setOnAction(event -> {
             if (profile1.getText().equals("")){
-                profile1.setText(textFieldCreateProfileName.getText());
+                Profile profile = new Profile(textFieldCreateProfileName.getText(), datePickerCreateProfileBirthDate.getValue(), null);
+                profile1.setText(profile.getName());
+                account.addProfile(profile);
             } else if (profile2.getText().equals("")){
-                profile2.setText(textFieldCreateProfileName.getText());
+                Profile profile = new Profile(textFieldCreateProfileName.getText(), datePickerCreateProfileBirthDate.getValue(), null);
+                profile2.setText(profile.getName());
+                account.addProfile(profile);
             } else if (profile3.getText().equals("")) {
-                profile3.setText(textFieldCreateProfileName.getText());
+                Profile profile = new Profile(textFieldCreateProfileName.getText(), datePickerCreateProfileBirthDate.getValue(), null);
+                profile3.setText(profile.getName());
+                account.addProfile(profile);
             } else if (profile4.getText().equals("")) {
-                profile4.setText(textFieldCreateProfileName.getText());
+                Profile profile = new Profile(textFieldCreateProfileName.getText(), datePickerCreateProfileBirthDate.getValue(), null);
+                profile4.setText(profile.getName());
+                account.addProfile(profile);
             }
 
             textFieldCreateProfileName.clear();
@@ -272,6 +334,14 @@ public class View extends Application {
         createProfileCancel.setOnAction(event -> {
             primaryStage.setScene(profileScene);
         });
+
+        //Hier worden de knoppen van de profielen geregeld
+
+        buttonHomeDeleteProfile.setOnAction(event -> {
+
+        });
+
+
     }
 
 

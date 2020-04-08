@@ -23,8 +23,8 @@ public class Account {
         profiles.add(profile);
     }
 
-    public void deleteProfile(Profile profile) {
-        profiles.remove(profile);
+    public void deleteProfile(int place) {
+        profiles.remove(place);
     }
 
     public String getName() {
