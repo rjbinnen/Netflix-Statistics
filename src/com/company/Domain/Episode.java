@@ -12,7 +12,8 @@ public class Episode {
         this.watchedTime = watchedTime;
     }
 
-    public double percWatchTime(int runTime, int watchedTime) {
-        return -1;
+    public String percWatchTime() {
+        double watchedTimeDouble = this.watchedTime;
+        return (watchedTimeDouble / runTime) * 100 + "%";
     }
 }

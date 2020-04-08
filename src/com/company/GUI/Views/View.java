@@ -1,5 +1,6 @@
 package com.company.GUI.Views;
 
+import com.company.Domain.Episode;
 import com.company.GUI.Controllers.RegisterController;
 import javafx.application.Application;
 import javafx.geometry.Insets;
@@ -13,6 +14,10 @@ import javafx.stage.Stage;
 public class View extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
+
+
+        Episode episode = new Episode(5, 60, 30);
+        System.out.println(episode.percWatchTime());
         //Opens this when app is started -- Login view
 
         GridPane gridPaneHome = new GridPane();
