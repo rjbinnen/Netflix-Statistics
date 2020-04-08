@@ -101,6 +101,7 @@ public class View extends Application {
         //Profile view
         GridPane gridPaneProfile = new GridPane();
         Scene ProfileScene = new Scene(gridPaneProfile);
+        gridPaneProfile.setMinSize(400, 200);
 
 
         //Insert naam profielen + klik naar ander scherm
@@ -195,8 +196,41 @@ public class View extends Application {
 
         // Hier worden de knoppen voor de profielen geregeld
 
+        profile1.setOnAction(event -> {
+            if (profile1.getText().equals("")){
+                primaryStage.setScene(createProfileScene);
+            } else {
+                primaryStage.setScene(homeScene);
+            }
 
+        });
 
+        profile2.setOnAction(event -> {
+            if (profile2.getText().equals("")){
+                primaryStage.setScene(createProfileScene);
+            } else {
+                primaryStage.setScene(homeScene);
+            }
+
+        });
+
+        profile3.setOnAction(event -> {
+            if (profile3.getText().equals("")){
+                primaryStage.setScene(createProfileScene);
+            } else {
+                primaryStage.setScene(homeScene);
+            }
+
+        });
+
+        profile4.setOnAction(event -> {
+            if (profile4.getText().equals("")){
+                primaryStage.setScene(createProfileScene);
+            } else {
+                primaryStage.setScene(homeScene);
+            }
+
+        });
     }
 
 
