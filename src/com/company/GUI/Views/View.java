@@ -203,6 +203,8 @@ public class View extends Application {
             String pw = "Beepboop";
             if (textFieldEmail.getText().equals(email) && textFieldPassword.getText().equals(pw)){
                 primaryStage.setScene(profileScene);
+                textFieldEmail.clear();
+                textFieldPassword.clear();
             } else {
                 textFieldEmail.setText("");
                 textFieldPassword.setText("");
@@ -217,7 +219,7 @@ public class View extends Application {
 
         confirmRegisterButton.setOnAction(event -> {
             //controleert input
-            RegisterController regctrl = new RegisterController(textFieldName, textFieldEmail, textFieldPassword, textFieldPasswordRepeat, textFieldStreetName, textFieldHouseNumber, textFieldAddition, textFieldCity);
+            RegisterController regctrl = new RegisterController(textFieldName, textFieldRegisterEmail, textFieldRegisterPassword, textFieldPasswordRepeat, textFieldStreetName, textFieldHouseNumber, textFieldAddition, textFieldCity);
             Account account = regctrl.registerValidation();
             if (!account.getName().equals("Failed to register Account")) {
                 System.out.println("Registration successful");
@@ -243,7 +245,6 @@ public class View extends Application {
                 primaryStage.setScene(homeScene);
                 labelHomeProfileName.setText(profile1.getText());
             }
-
         });
 
         profile2.setOnAction(event -> {
@@ -253,7 +254,6 @@ public class View extends Application {
                 primaryStage.setScene(homeScene);
                 labelHomeProfileName.setText(profile2.getText());
             }
-
         });
 
         profile3.setOnAction(event -> {
@@ -263,7 +263,6 @@ public class View extends Application {
                 primaryStage.setScene(homeScene);
                 labelHomeProfileName.setText(profile3.getText());
             }
-
         });
 
         profile4.setOnAction(event -> {
@@ -272,9 +271,7 @@ public class View extends Application {
                 } else {
                 primaryStage.setScene(homeScene);
                 labelHomeProfileName.setText(profile4.getText());
-
             }
-
         });
 
         createProfile.setOnAction(event -> {
@@ -285,6 +282,10 @@ public class View extends Application {
             }
         });
 
+        logOutAccount.setOnAction(event -> {
+            primaryStage.setScene(logInScene);
+        });
+
         //Hier worden de knoppen voor het creëren van een profiel geregeld
 
 
@@ -292,7 +293,7 @@ public class View extends Application {
             if (profile1.getText().equals("")){
                 Profile profile = new Profile(textFieldCreateProfileName.getText(), datePickerCreateProfileBirthDate.getValue(), null);
                 profile1.setText(profile.getName());
-                account.addProfile(profile);
+                //account.addProfile(profile);
             } else if (profile2.getText().equals("")){
                 Profile profile = new Profile(textFieldCreateProfileName.getText(), datePickerCreateProfileBirthDate.getValue(), null);
                 profile2.setText(profile.getName());
@@ -320,6 +321,10 @@ public class View extends Application {
 
         buttonHomeDeleteProfile.setOnAction(event -> {
 
+        });
+
+        buttonChooseProfile.setOnAction(event -> {
+            primaryStage.setScene(profileScene);
         });
 
 
