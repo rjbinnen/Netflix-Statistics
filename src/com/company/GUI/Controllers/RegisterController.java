@@ -31,7 +31,7 @@ public class RegisterController implements EventHandler<ActionEvent> {
         this.hsNmbr = hsNmbr;
     }
 
-    public void registerValidation() {
+    public Account registerValidation() {
         //controleert input
 
         //Voornaam + Achternaam
@@ -57,7 +57,9 @@ public class RegisterController implements EventHandler<ActionEvent> {
 
         if (emailOK && cityOK && numberOK && streetOK && repeatOK && passwordOK && nameOK) {
             System.out.println("Registration successful");
-            Account account = new Account(tfName.getText(), strName.getText(), Integer.parseInt(hsNmbr.getText()), addition.getText(), resName.getText(), null);
+            return new Account(tfName.getText(), strName.getText(), Integer.parseInt(hsNmbr.getText()), addition.getText(), resName.getText(), null);
+        } else {
+            return new Account("Failed to register Account", "", 3, "", "", null);
         }
     }
 

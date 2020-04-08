@@ -214,37 +214,18 @@ public class View extends Application {
 
         // Hier worden de knoppen voor de Registerscene geregeld
 
-        //RegisterController regctrl = new RegisterController(textFieldName, textFieldEmail, textFieldPassword, textFieldPasswordRepeat, textFieldStreetName, textFieldHouseNumber, textFieldAddition, textFieldCity);
+
         confirmRegisterButton.setOnAction(event -> {
             //controleert input
-
-            //Voornaam + Achternaam
-            boolean nameOK = Pattern.matches("(\\b[A-Z]{1}[a-z]+)( )([A-Z]{1}[a-z]+\\b)", textFieldName.getText());
-
-            //Password
-            boolean passwordOK = textFieldPassword.getLength() > 7;
-
-            //Herhaalde password en controle
-            boolean repeatOK = textFieldPasswordRepeat.getText().equals(textFieldPassword.getText());
-
-            //Straatnaam
-            boolean streetOK = Pattern.matches("^[A-Z].*", textFieldStreetName.getText());
-
-            //Huisnummer
-            boolean numberOK = Pattern.matches("[0-9]+", textFieldHouseNumber.getText());
-
-            //Woonplaats
-            boolean cityOK = Pattern.matches("^[A-Z].*", textFieldCity.getText());
-
-            //email
-            boolean emailOK = Pattern.matches("^[\\w!#$%&'*+/=?`{|}~^-]+(?:\\.[\\w!#$%&'*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$", textFieldEmail.getText());
-
-            if (emailOK && cityOK && numberOK && streetOK && repeatOK && passwordOK && nameOK) {
+            RegisterController regctrl = new RegisterController(textFieldName, textFieldEmail, textFieldPassword, textFieldPasswordRepeat, textFieldStreetName, textFieldHouseNumber, textFieldAddition, textFieldCity);
+            Account account = regctrl.registerValidation();
+            if (!account.getName().equals("Failed to register Account")) {
                 System.out.println("Registration successful");
-                account = new Account(textFieldName.getText(), textFieldStreetName.getText(), Integer.parseInt(textFieldHouseNumber.getText()), textFieldAddition.getText(), textFieldCity.getText(), null);
+                Account verifiedAccount = account;
+                //Add verifiedAccount to database
                 primaryStage.setScene(logInScene);
             } else {
-                System.out.println("fialure");
+                System.out.println("failure");
             }
 
 
