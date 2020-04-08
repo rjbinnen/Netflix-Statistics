@@ -161,6 +161,7 @@ public class View extends Application {
         Scene homeScene = new Scene(gridPaneHomePage);
 
         Button buttonHomeDeleteProfile = new Button("Delete Profile");
+        Button buttonChooseProfile = new Button("Choose different Profile");
 
         Text textHomeSeenPrograms = new Text("Programs you have watched: ");
         Text textHomeRecommendedProgram = new Text("Recommended program: ");
@@ -172,10 +173,11 @@ public class View extends Application {
         gridPaneHomePage.setAlignment(Pos.CENTER);
         gridPaneHomePage.add(labelHomeProfileName, 0, 0);
         gridPaneHomePage.add(textHomeSeenPrograms, 0, 1);
-        gridPaneHomePage.add(labelHomeSeenPrograms, 1, 1);
+        gridPaneHomePage.add(labelHomeSeenPrograms, 2, 1);
         gridPaneHomePage.add(textHomeRecommendedProgram, 0, 2);
-        gridPaneHomePage.add(labelHomeRecommendedProgram, 1, 2);
+        gridPaneHomePage.add(labelHomeRecommendedProgram, 2, 2);
         gridPaneHomePage.add(buttonHomeDeleteProfile, 0, 3);
+        gridPaneHomePage.add(buttonChooseProfile, 2, 3);
 
 
         primaryStage.setTitle("Netflix Statistics - Home");
