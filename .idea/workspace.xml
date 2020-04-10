@@ -2,20 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86036263-9891-43ef-b0ab-bc1c88660fc3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Netflix-Statistics/com/company/Domain/Account.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Netflix-Statistics/com/company/Domain/Episode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Netflix-Statistics/com/company/Domain/Film.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Netflix-Statistics/com/company/Domain/Profile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Netflix-Statistics/com/company/Domain/Program.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Netflix-Statistics/com/company/Domain/Series.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Netflix-Statistics/com/company/GUI/Controllers/ProfileController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Netflix-Statistics/com/company/GUI/Controllers/RegisterController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Netflix-Statistics/com/company/GUI/Views/View.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Netflix-Statistics/com/company/GUI/Views/testView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Netflix-Statistics/com/company/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/GUI/Controllers/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/GUI/Controllers/RegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Netflix-Statistics/com/company/GUI/Views/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Netflix-Statistics/com/company/GUI/Views/View.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Netflix-Statistics/com/company/GUI/Views/testView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Netflix-Statistics/com/company/GUI/Views/testView.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/GUI/Views/testView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/GUI/Views/testView.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -50,13 +39,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/GUI/Views/testView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="15" column="32" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="32" />
+            <state relative-caret-position="625">
+              <caret line="39" column="67" selection-start-line="39" selection-start-column="67" selection-end-line="39" selection-end-column="67" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/GUI/Views/View.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="95" column="8" lean-forward="true" selection-start-line="95" selection-start-column="8" selection-end-line="99" selection-end-column="50" />
+              <folding>
+                <element signature="e#712#743#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -80,10 +81,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/GUI/Controllers/RegisterController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="918">
+            <state relative-caret-position="255">
               <caret line="60" column="16" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="16" />
             </state>
           </provider>
@@ -94,18 +95,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
               <caret line="7" selection-start-line="7" selection-end-line="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/GUI/Views/View.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
-              <folding>
-                <element signature="e#712#743#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -201,11 +190,6 @@
             <path>
               <item name="Netflix-Statistics" type="b2602c69:ProjectViewProjectNode" />
               <item name="Netflix-Statistics" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Netflix-Statistics" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Netflix-Statistics" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -266,7 +250,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1586525490040" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1586526254730" />
     <property name="last_opened_file_path" value="G:/IN 1.3/software architectuur &amp; design/Library_DummyData" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -392,7 +376,7 @@
       <workItem from="1579162337687" duration="1712000" />
       <workItem from="1579262668320" duration="302000" />
       <workItem from="1579263020967" duration="529000" />
-      <workItem from="1586518128939" duration="4795000" />
+      <workItem from="1586518128939" duration="6073000" />
     </task>
     <task id="LOCAL-00001" summary="main is just main, i put the FX in the GuiView class">
       <created>1579089009905</created>
@@ -485,11 +469,18 @@
       <option name="project" value="LOCAL" />
       <updated>1586262154370</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="New button for profile 5">
+      <created>1586525646103</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1586525646103</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25273000" />
+    <option name="totallyTimeSpent" value="26551000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
@@ -504,7 +495,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49930844" weight="0.32573727" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49930844" visible="true" weight="0.32573727" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -569,7 +560,8 @@
     <MESSAGE value="test" />
     <MESSAGE value="weet niet meer wat ik aan het doen ben" />
     <MESSAGE value="verbeterde login GUI" />
-    <option name="LAST_COMMIT_MESSAGE" value="verbeterde login GUI" />
+    <MESSAGE value="New button for profile 5" />
+    <option name="LAST_COMMIT_MESSAGE" value="New button for profile 5" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Netflix-Statistics.iml">
@@ -605,27 +597,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Domain/Account.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/GUI/Controllers/ProfileController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/GUI/Controllers/RegisterController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="60" column="16" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -654,10 +625,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Domain/Account.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/GUI/Views/View.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
+        <state relative-caret-position="234">
+          <caret line="95" column="8" lean-forward="true" selection-start-line="95" selection-start-column="8" selection-end-line="99" selection-end-column="50" />
           <folding>
             <element signature="e#712#743#0" expanded="true" />
           </folding>
@@ -666,11 +644,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/GUI/Views/testView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="15" column="32" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="32" />
+        <state relative-caret-position="625">
+          <caret line="39" column="67" selection-start-line="39" selection-start-column="67" selection-end-line="39" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/GUI/Controllers/ProfileController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/GUI/Controllers/RegisterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="60" column="16" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="16" />
         </state>
       </provider>
     </entry>
