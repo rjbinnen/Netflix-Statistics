@@ -121,7 +121,6 @@ public class View extends Application {
 
        primaryStage.setTitle("Netflix Statistics - Register");
 
-        //Profile view
         GridPane gridPaneProfile = new GridPane();
         Scene profileScene = new Scene(gridPaneProfile);
         gridPaneProfile.setMinSize(400, 200);
@@ -132,8 +131,10 @@ public class View extends Application {
         Button profile2 = new Button();
         Button profile3 = new Button();
         Button profile4 = new Button();
+        Button profile5 = new Button();
         Label emptyLabel = new Label();
         Label emptyLabel2 = new Label();
+        Label emptyLabel3 = new Label();
 
         Button createProfile = new Button("Create Profile");
         Button logOutAccount = new Button("Log out");
@@ -144,12 +145,17 @@ public class View extends Application {
         gridPaneProfile.add(emptyLabel, 0, 1);
         gridPaneProfile.add(profile3, 0, 2);
         gridPaneProfile.add(profile4, 2, 2);
-        gridPaneProfile.add(emptyLabel2, 0, 3);
-        gridPaneProfile.add(logOutAccount, 0, 4);
-        gridPaneProfile.add(createProfile, 3, 4);
+        gridPaneProfile.add(emptyLabel3, 0, 3);
+        gridPaneProfile.add(profile5, 0, 4);
+        gridPaneProfile.add(emptyLabel2, 0, 5);
+        gridPaneProfile.add(logOutAccount, 0, 6);
+        gridPaneProfile.add(createProfile, 3, 6);
 
 
         primaryStage.setTitle("Netflix Statistics - Choose Profile");
+
+        primaryStage.setScene(profileScene);
+        primaryStage.show();
 
         //Create profile view
         GridPane gridPaneCreateProfile = new GridPane();
@@ -283,8 +289,17 @@ public class View extends Application {
             }
         });
 
+        profile5.setOnAction(event -> {
+            if (profile5.getText().equals("")){
+
+            } else {
+                primaryStage.setScene(homeScene);
+                labelHomeProfileName.setText(profile5.getText());
+            }
+        });
+
         createProfile.setOnAction(event -> {
-            if (profile4.getText().equals("")){
+            if (profile5.getText().equals("")){
                 primaryStage.setScene(createProfileScene);
             } else {
 
